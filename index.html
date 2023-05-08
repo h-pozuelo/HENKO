@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="./fonts/Helvetica Neue/stylesheet.css">
     <link rel="stylesheet" href="./fonts/PolySans/stylesheet.css">
     <link rel="stylesheet" href="./styles/css/main.css">
+    <link rel="stylesheet" href="./animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./jquery-ui/1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="./poppa/css/github.css">
+    <link rel="stylesheet" href="./poppa/css/global.css">
+    <link rel="stylesheet" href="./poppa/css/validation.css">
+    <link rel="stylesheet" href="./magnific-popup/magnific-popup.css">
 </head>
 
 <body>
@@ -36,33 +42,55 @@
             <div class="celda mostrar-movil"></div>
         </div>
         <div class="fila">
-            <div class="columna-izquierda">
+            <div class="columna-izquierda animacion-deslizar-arriba">
                 <div class="mas-informacion">
                     <p>Lorem ipsum dolor sit amet consectetur. Dictum eu vestibulum tincidunt pulvinar ut consequat.</p>
                     <button onclick="mostrarFormulario()">MÁS INFORMACIÓN</button>
                 </div>
             </div>
-            <div class="columna-derecha">
+            <div class="columna-derecha animacion-deslizar-izquierda">
                 <img src="./images/png/mujer_pelo_rubio.png" alt="">
             </div>
-            <div class="formulario" onmouseleave="ocultarFormulario()">
-                <form action="">
+            <div class="formulario">
+                <img src="./images/svg/cerrar.svg" alt="" onclick="ocultarFormulario()">
+                <form action="#" method="post">
                     <h1>Lorem ipsum dolor</h1>
                     <p>Lorem ipsum dolor sit amet consectetur. Dictum eu vestibulum tincidunt pulvinar ut consequat.</p>
                     <div class="cuadricula">
-                        <input type="text" name="nombre" id="" placeholder="Nombre" required>
-                        <select name="tipo" id="" required>
-                            <option value="" disabled selected hidden>Tipo</option>
-                        </select>
-                        <input type="email" name="email" id="" placeholder="Email" required>
-                        <input type="number" name="codigo-postal" id="" placeholder="Código Postal" required>
-                        <select name="perfil" id="" required>
-                            <option value="" disabled selected hidden>Perfil</option>
-                        </select>
-                        <textarea name="comentarios" id="" cols="30" rows="10" placeholder="Comentarios"
-                            required></textarea>
-                        <input type="text" name="colegio" id="" placeholder="Colegio" required>
-                        <div class="pareja">
+                        <div class="campo">
+                            <input type="text" name="nombre" id="" placeholder="Nombre" required>
+                        </div>
+                        <div class="campo">
+                            <select name="tipo" id="" required>
+                                <option value="" disabled selected hidden>Tipo</option>
+                                <option value="director">Director/a</option>
+                                <option value="orientador">Orientador/a</option>
+                                <option value="profesor">Profesor/a</option>
+                                <option value="alumno">Alumno/a</option>
+                                <option value="tutor">Padre/madre - tutor/a</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <input type="email" name="email" id="" placeholder="Email" required>
+                        </div>
+                        <div class="campo">
+                            <input type="number" name="codigo-postal" id="" placeholder="Código Postal" required>
+                        </div>
+                        <div class="campo">
+                            <select name="perfil" id="" required>
+                                <option value="" disabled selected hidden>Perfil</option>
+                                <option value="concertado">Concertado</option>
+                                <option value="privado">Privado</option>
+                                <option value="publico">Público</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <textarea name="comentarios" id="" cols="30" rows="10" placeholder="Comentarios"></textarea>
+                        </div>
+                        <div class="campo">
+                            <input type="text" name="colegio" id="" placeholder="Colegio" required>
+                        </div>
+                        <div class="campo">
                             <input type="checkbox" name="proteccion-de-datos" id="" required>
                             <label for="proteccion-de-datos">He leído la Política de Protección de datos</label>
                         </div>
@@ -74,10 +102,10 @@
     </div>
 
     <div class="apartado-decisiones">
-        <h1>Los estudiantes y sus familias desean tomar
+        <h1 class="animacion-deslizar-derecha">Los estudiantes y sus familias desean tomar
             <span>buenas decisiones</span>
         </h1>
-        <div class="cuadricula">
+        <div class="cuadricula animacion-deslizar-arriba">
             <div class="celda">
                 <p>Preocuparse menos</p>
             </div>
@@ -92,12 +120,12 @@
             </div>
         </div>
         <div class="fila">
-            <div class="columna-izquierda">
+            <div class="columna-izquierda animacion-deslizar-arriba">
                 <p>Tanto estudiantes como familias confían en que el paso por el centro les sirva para tomar las
                     <span>mejores decisiones posibles sobre el futuro.</span>
                 </p>
             </div>
-            <div class="columna-derecha">
+            <div class="columna-derecha animacion-deslizar-izquierda">
                 <img src="./images/png/mujer_pelo_castano.png" alt="">
             </div>
         </div>
@@ -106,7 +134,7 @@
     <div class="apartado-henko">
         <div class="cuadricula">
             <div class="celda">
-                <h1>La palabra ‘Henko’</h1>
+                <h1 class="animacion-deslizar-arriba">La palabra ‘Henko’</h1>
             </div>
             <div class="celda">
                 <img src="./images/png/granulado_verde_pistacho.png" alt="">
@@ -124,13 +152,13 @@
             <div class="celda"></div>
             <div class="celda"></div>
             <div class="celda">
-                <p>En Japón, la palabra ‘henko’ describe la <span>transformación propia que nos estimula</span>, que nos
-                    anima a encontrar nuestro <span>propio camino.</span></p>
-                <p>Y eso es <span>Henko</span>:</p>
-                <p>El servicio educativo en materia de orientación profesional y académica de Grupo Anaya con el que
-                    <span>los centros acompañan y ayudan a los estudiantes y a sus familias</span> a conectar con su
-                    <span>futuro con menos dudas y más certezas.</span>
+                <p class="animacion-deslizar-izquierda">En Japón, la palabra ‘henko’ describe la <span>transformación
+                        propia que nos estimula</span>, que nos anima a encontrar nuestro <span>propio camino.</span>
                 </p>
+                <p class="animacion-deslizar-izquierda">Y eso es <span>Henko</span>:</p>
+                <p class="animacion-deslizar-izquierda">El servicio educativo en materia de orientación profesional y
+                    académica de Grupo Anaya con el que <span>los centros acompañan y ayudan a los estudiantes y a sus
+                        familias</span> a conectar con su <span>futuro con menos dudas y más certezas.</span></p>
             </div>
             <div class="celda mostrar-movil"></div>
             <div class="celda mostrar-movil"></div>
@@ -140,25 +168,25 @@
             <div class="celda mostrar-movil"></div>
             <div class="celda mostrar-movil"></div>
             <div class="celda mostrar-movil"></div>
-            <div class="celda mostrar-movil"></div>
-            <div class="celda mostrar-movil"></div>
-            <div class="celda mostrar-movil"></div>
-            <div class="celda mostrar-movil"></div>
-            <div class="celda mostrar-movil"></div>
-            <div class="celda mostrar-movil"></div>
-            <div class="celda mostrar-movil"></div>
-            <div class="celda mostrar-movil"></div>
+            <div class="celda mostrar-movil min-535px"></div>
+            <div class="celda mostrar-movil min-535px"></div>
+            <div class="celda mostrar-movil min-480px"></div>
+            <div class="celda mostrar-movil min-480px"></div>
+            <div class="celda mostrar-movil min-435px"></div>
+            <div class="celda mostrar-movil min-435px"></div>
+            <div class="celda mostrar-movil min-400px"></div>
+            <div class="celda mostrar-movil min-400px"></div>
         </div>
     </div>
 
     <div class="apartado-centros-educativos">
         <div class="fila">
-            <div class="columna-izquierda">
+            <div class="columna-izquierda animacion-deslizar-derecha">
                 <h1>Los centros educativos</h1>
                 <p>Son decisiones únicas y trascendentales y tanto estudiantes como familias confían en que su paso por
                     el centro les ayude a tomar las mejores decisiones posibles sobre su futuro.</p>
             </div>
-            <div class="columna-derecha">
+            <div class="columna-derecha animacion-deslizar-izquierda">
                 <p>Sabemos que <span>cada persona es única</span>.Y que las <span>decisiones</span> acerca de su vida
                     <span>educativa</span> y su futuro <span>profesional y...</span>
                 </p>
@@ -173,18 +201,18 @@
             </div>
         </div>
         <div class="">
-            <img src="./images/png/nina_dibujando.png" alt="">
+            <img src="./images/png/nina_dibujando.png" alt="" class="animacion-deslizar-arriba">
         </div>
-        <h2><span>Y</span> Henko nace como solución integral
+        <h2 class="animacion-deslizar-derecha"><span>Y</span> Henko nace como solución integral
             que dota de más capacidad a
             orientadores y docentes para que los
             estudiantes tomen mejores decisiones</h2>
     </div>
 
     <div class="apartado-servicios">
-        <h1>Servicios</h1>
+        <h1 class="animacion-deslizar-arriba">Servicios</h1>
         <div class="fila">
-            <div class="columna-izquierda">
+            <div class="columna-izquierda animacion-deslizar-derecha">
                 <p>Además de ser un servicio absolutamente <span>inédito</span>, la estrategia de orientación de Henko
                     invita a que todas las <span>partes implicadas en el proceso desempeñen un papel activo</span> en la
                     tarea de <span>acompañar a los estudiantes a alinear su futuro</span> con sus intereses, aptitudes y
@@ -192,7 +220,7 @@
                 <p>Además, los centros encuentran en Henko la única <span>solución</span> integral y constante que da
                     respuesta a todos los <span>agentes del proceso educativo</span>:</p>
             </div>
-            <div class="columna-derecha">
+            <div class="columna-derecha animacion-deslizar-izquierda">
                 <div class="pareja">
                     <img src="./images/svg/carita_contenta.svg" alt="">
                     <p>Da <span>orientación</span>, <span>personalización</span> y <span>autoconfianza</span> a los
@@ -225,41 +253,43 @@
     </div>
 
     <div class="apartado-herramientas-materiales">
-        <p>Henko proporciona a los centros herramientas y materiales con dos misiones principales:</p>
-        <div class="fila">
-            <div class="columna-izquierda">
+        <p class="animacion-deslizar-derecha">Henko proporciona a los centros herramientas y materiales con dos misiones
+            principales:</p>
+        <div class="fila animacion-deslizar-arriba">
+            <div class="columna-izquierda animacion-deslizar-arriba">
                 <h1>01</h1>
             </div>
-            <div class="columna-derecha">
+            <div class="columna-derecha animacion-deslizar-izquierda">
                 <h2>Facilitar</h2>
                 <p>que los estudiantes desarrollen su autoconocimiento, mejoren su forma de aprender y su capacidad para
                     tomar mejores decisiones de cara a su futuro.</p>
             </div>
         </div>
-        <div class="fila">
-            <div class="columna-izquierda">
+        <div class="fila animacion-deslizar-arriba">
+            <div class="columna-izquierda animacion-deslizar-arriba">
                 <h1>02</h1>
             </div>
-            <div class="columna-derecha">
+            <div class="columna-derecha animacion-deslizar-izquierda">
                 <h2>Ayudar</h2>
                 <p>a que orientadores y tutores desempeñen un papel decisivo en el futuro de sus alumnos y alumnas.</p>
             </div>
         </div>
-        <p>Cualquier centro, independientemente del nivel en materia de Orientación en el que esté, se puede beneficiar
-            de Henko.</p>
+        <p class="animacion-deslizar-derecha">Cualquier centro, independientemente del nivel en materia de Orientación
+            en el que esté, se puede beneficiar de Henko.</p>
     </div>
 
     <div class="apartado-colaboradores">
         <div class="conjunto">
-            <h1>Colaboradores</h1>
-            <p>Para conseguirlo, <span>Grupo Anaya</span> se ha <span>aliado</span> con:</p>
+            <h1 class="animacion-deslizar-arriba">Colaboradores</h1>
+            <p class="animacion-deslizar-arriba">Para conseguirlo, <span>Grupo Anaya</span> se ha <span>aliado</span>
+                con:</p>
             <div class="fila">
-                <div class="columna-izquierda">
+                <div class="columna-izquierda animacion-deslizar-derecha">
                     <img src="./images/png/Fundacion_Bertelsmann_Logo.png" alt="">
                     <p>Referente en España en el desarrollo de programas de orientación académico-profesional e
                         impulsora del marco.</p>
                 </div>
-                <div class="columna-derecha">
+                <div class="columna-derecha animacion-deslizar-izquierda">
                     <img src="./images/png/Singularity_Experts_Logo.png" alt="">
                     <p>Solución de referencia en orientación avanzada, enfocada a ayudar a los estudiantes a encontrar
                         su vocación.</p>
@@ -270,11 +300,11 @@
 
     <div class="fila">
         <div class="columna-izquierda">
-            <img src="./images/png/mujer_pelo_oscuro.png" alt="">
+            <img src="./images/png/mujer_pelo_oscuro.png" alt="" class="animacion-deslizar-izquierda">
         </div>
         <div class="columna-derecha">
-            <h1>Henko hace cualquier centro...</h1>
-            <ul>
+            <h1 class="animacion-deslizar-derecha">Henko hace cualquier centro...</h1>
+            <ul class="animacion-deslizar-arriba">
                 <li>Diferente</li>
                 <li>Innovador</li>
                 <li>Más relevante</li>
@@ -285,7 +315,7 @@
 
     <div class="cuadricula banner-inferior">
         <div class="celda">
-            <h1>Henko tus decisiones
+            <h1 class="animacion-deslizar-arriba">Henko tus decisiones
                 son únicas</h1>
         </div>
         <div class="celda"></div>
@@ -316,15 +346,111 @@
         </ul>
     </div>
 
+    <script src="./jquery/3.6.4/jquery-3.6.4.min.js"></script>
+    <script src="./jquery-ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="./waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="./poppa/js/global.js"></script>
+    <script src="./poppa/js/highlight.js"></script>
+    <script src="./poppa/js/poppa.js"></script>
+    <script src="./magnific-popup/jquery.magnific-popup.js"></script>
+
     <script type="text/javascript">
 
         function mostrarFormulario() {
-            document.getElementsByClassName("formulario")[0].style.display = "block";
+            document.getElementsByClassName('formulario')[0].style.display = 'block';
         }
 
         function ocultarFormulario() {
-            document.getElementsByClassName("formulario")[0].style.display = "none";
+            document.getElementsByClassName('formulario')[0].style.display = 'none';
         }
+
+        $(document).ready(function () {
+
+            var offset = '80%';
+
+            $('.animacion-mostrar').css('opacity', '0');
+            $('.animacion-mostrar').each(function () {
+                let elemento = $(this);
+                $(elemento).waypoint(function (direction) {
+                    mostrarElemento($(elemento));
+                }, { offset });
+            });
+
+            cssElemento($('.animacion-deslizar-arriba'), 'top');
+            $('.animacion-deslizar-arriba').each(function () {
+                let elemento = $(this);
+                $(elemento).waypoint(function (direction) {
+                    deslizarElemento($(elemento), 'top');
+                }, { offset });
+            });
+
+            cssElemento($('.animacion-deslizar-derecha'), 'right');
+            $('.animacion-deslizar-derecha').each(function () {
+                let elemento = $(this);
+                $(elemento).waypoint(function (direction) {
+                    deslizarElemento($(elemento), 'right');
+                }, { offset });
+            });
+
+            cssElemento($('.animacion-deslizar-izquierda'), 'left');
+            $('.animacion-deslizar-izquierda').each(function () {
+                let elemento = $(this);
+                $(elemento).waypoint(function (direction) {
+                    deslizarElemento($(elemento), 'left');
+                }, { offset });
+            });
+
+            function cssElemento($element, direction) {
+                var cssProps = {};
+                cssProps[direction] = '100px';
+                cssProps['opacity'] = '0';
+                $element.css(cssProps);
+            };
+
+            function mostrarElemento($element) {
+                $element.delay(300).animate({
+                    'opacity': '1',
+                }, 600);
+            };
+
+            function deslizarElemento($element, direction) {
+                var animProps = {};
+                animProps[direction] = '0px';
+                animProps['opacity'] = '1';
+                $element.delay(300).animate(animProps, 600);
+            };
+
+            hljs.initHighlightingOnLoad();
+
+            $('body .banner-superior > .fila .formulario form').validation({
+                autocomplete: 'off',
+                liveValidation: false,
+                formInvalidAlertWarning: 'Corrige los errores antes de enviar este formulario.',
+                requiredMessage: function () {
+                    return 'Este es un campo obligatorio.';
+                }
+            });
+
+            $('body .apartado-video .reproductor-de-video .controles-de-reproduccion button').magnificPopup({
+                items: {
+                    src: 'https://www.youtube.com/embed/AaRhB3hOb3E?rel=0&autoplay=1',
+                },
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 400,
+                preloader: false,
+                iframe: {
+                    patterns: {
+                        youtube: {
+                            index: 'youtube.com',
+                            id: 'v=',
+                            src: 'https://www.youtube.com/embed/AaRhB3hOb3E?rel=0&autoplay=1',
+                        },
+                    },
+                },
+            });
+
+        });
 
     </script>
 
